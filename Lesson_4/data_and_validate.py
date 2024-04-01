@@ -10,6 +10,9 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 
 driver.get("https://www.wikipedia.org/")
 
+
+driver.switch_to.new_window('tab')
+
 # url = driver.current_url
 # print(url)
 #
@@ -21,5 +24,5 @@ driver.get("https://www.wikipedia.org/")
 
 print(driver.page_source)
 
-time.sleep(3)
+time.sleep(10)
 
