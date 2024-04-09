@@ -19,6 +19,7 @@ wait = WebDriverWait(driver, 30)
 
 BUTTON_ALERT = ("xpath", '//button[@id="alertButton"]')
 BUTTON_CONFIRM = ("xpath", '//button[@id="confirmButton"]')
+BUTTON_PROMPT = ("xpath", '//button[@id="promtButton"]')
 
 
 
@@ -35,5 +36,14 @@ wait.until(EC.element_to_be_clickable(BUTTON_CONFIRM)).click()
 alert = wait.until(EC.alert_is_present())
 driver.switch_to.alert
 time.sleep(3)
+print(alert.text)
 alert.dismiss()
+time.sleep(3)
+
+wait.until(EC.element_to_be_clickable(BUTTON_PROMPT)).click()
+alert = wait.until(EC.alert_is_present())
+driver.switch_to.alert
+time.sleep(3)
+alert.send_keys("QWERTY")
+alert.accept()
 time.sleep(3)
