@@ -85,7 +85,6 @@ driver.find_element(*LOGIN_FIELD).send_keys("")
 driver.find_element(*PASSWORD_FIELD).send_keys("")
 driver.find_element(*SUBMIT_BUTTON).click()
 
-print(driver.session_id)
 
 # pickle.dump(driver.get_cookies(), open(os.getcwd() + "/cookies/cookies.pkl", "wb"))
 
