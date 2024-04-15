@@ -35,5 +35,12 @@ sub_sub_item_2 = wait.until(EC.presence_of_element_located(SUB_SUB_ITEM_2))
 
 time.sleep(1)
 
-action.move_to_element(main_item_2).pause(1).move_to_element(sub_sub_list).pause(1).move_to_element(sub_sub_item_2).pause(1).perform()
+action.move_to_element(main_item_2)\
+    .pause(1)\
+    .move_to_element(sub_sub_list)\
+    .pause(1)\
+    .move_to_element(sub_sub_item_2)\
+    .pause(1)\
+    .perform()
+
 time.sleep(3)
