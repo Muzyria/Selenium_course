@@ -23,25 +23,17 @@ wait = WebDriverWait(driver, 10)
 action = ActionChains(driver)
 
 
-LEFT_CLICK_BUTTON = ("xpath", "//button[@id='leftClick']")
-DOUBLE_CLICK_BUTTON = ("xpath", "//button[@id='doubleClick']")
-RIGHT_CLICK_BUTTON = ("xpath", "//button[@id='rightClick']")
-HOVER_BUTTON = ("xpath", "//button[@id='colorChangeOnHover']")
+MAIN_ITEM_2 = ("xpath", "//a[text()='Main Item 2']")
+SUB_SUB_LIST = ("xpath", "//a[text()='SUB SUB LIST »']")
+SUB_SUB_ITEM_2 = ("xpath", "//a[text()='Sub Sub Item 2']")
 
-driver.get("https://testkru.com/Elements/Buttons")
+driver.get("https://demoqa.com/menu")
 
-left_button = wait.until(EC.visibility_of_element_located(LEFT_CLICK_BUTTON))
-double_button = wait.until(EC.visibility_of_element_located(DOUBLE_CLICK_BUTTON))
-right_button = wait.until(EC.visibility_of_element_located(RIGHT_CLICK_BUTTON))
-hover_button = wait.until(EC.visibility_of_element_located(HOVER_BUTTON))
+main_item_2 = wait.until(EC.presence_of_element_located(MAIN_ITEM_2))
+sub_sub_list = wait.until(EC.presence_of_element_located(SUB_SUB_LIST))
+sub_sub_item_2 = wait.until(EC.presence_of_element_located(SUB_SUB_ITEM_2))
 
 time.sleep(1)
-# action.click(left_button).perform()
-# action.double_click(double_button).perform()
-# action.context_click(right_button).perform()
 
-# action.click(left_button).pause(1).double_click(double_button).pause(1).context_click(right_button).perform()
-
-action.move_to_element(hover_button).perform()
-
+action.move_to_element(main_item_2).pause(1).move_to_element(sub_sub_list).pause(1).move_to_element(sub_sub_item_2).pause(1).perform()
 time.sleep(3)
