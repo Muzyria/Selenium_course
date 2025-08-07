@@ -9,7 +9,12 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 
 driver.get("https://www.freeconferencecall.com/ru/ua/login")
 
-el = driver.find_element("id", "loginformsubmit")
-el.click()
+el = driver.find_elements("id", "loginformsubmit")
+print(el)
+# el.click()
+print("-------------------------")
+locator = ("id", "loginformsubmit1")
+el = driver.find_elements(*locator)
+print(el)
 
 time.sleep(3)
