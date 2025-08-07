@@ -25,24 +25,25 @@ BUTTON_PROMPT = ("xpath", '//button[@id="promtButton"]')
 
 driver.get("https://demoqa.com/alerts")
 
-wait.until(EC.element_to_be_clickable(BUTTON_ALERT)).click()
-alert = wait.until(EC.alert_is_present())
-driver.switch_to.alert
-time.sleep(3)
-alert.accept()
-time.sleep(3)
+# wait.until(EC.element_to_be_clickable(BUTTON_ALERT)).click()
+# alert = wait.until(EC.alert_is_present())
+# driver.switch_to.alert
+# time.sleep(3)
+# alert.accept()
+# time.sleep(3)
 
-wait.until(EC.element_to_be_clickable(BUTTON_CONFIRM)).click()
-alert = wait.until(EC.alert_is_present())
-driver.switch_to.alert
-time.sleep(3)
-print(alert.text)
-alert.dismiss()
-time.sleep(3)
 
+# wait.until(EC.element_to_be_clickable(BUTTON_CONFIRM)).click()
+# alert = wait.until(EC.alert_is_present())
+# driver.switch_to.alert
+# time.sleep(3)
+# print(alert.text)
+# alert.dismiss()
+# time.sleep(3)
+#
 wait.until(EC.element_to_be_clickable(BUTTON_PROMPT)).click()
 alert = wait.until(EC.alert_is_present())
-driver.switch_to.alert
+# driver.switch_to.alert
 time.sleep(3)
 alert.send_keys("QWERTY")
 alert.accept()

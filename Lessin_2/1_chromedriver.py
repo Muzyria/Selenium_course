@@ -13,3 +13,6 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 # driver.maximize_window()
 # driver.get("https://beta2.syncwise360.com/login")
 # time.sleep(10)
+
+
+
