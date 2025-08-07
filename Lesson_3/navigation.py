@@ -11,6 +11,9 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get("https://google.com")
 time.sleep(3)
 
+driver.refresh()
+time.sleep(3)
+
 driver.back()
 time.sleep(3)
 

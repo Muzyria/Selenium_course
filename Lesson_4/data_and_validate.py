@@ -11,10 +11,10 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get("https://www.wikipedia.org/")
 
 
-driver.switch_to.new_window('tab')
+# driver.switch_to.new_window('tab')
 
-# url = driver.current_url
-# print(url)
+url = driver.current_url
+print(url)
 #
 # current_title = driver.title
 # print(current_title)
@@ -22,7 +22,7 @@ driver.switch_to.new_window('tab')
 # assert url == "https://www.wikipedia.org/", "WRONG URL"
 # assert current_title == "Wikipedia", "WRONG TITLE"
 
-print(driver.page_source)
+# print(driver.page_source)
 
-time.sleep(10)
+time.sleep(5)
 
